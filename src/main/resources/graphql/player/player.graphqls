@@ -1,0 +1,5 @@
+type Player {
+    id: ID!
+    playerName: String!
+    playerCharacter: PlayerCharacter!
+}

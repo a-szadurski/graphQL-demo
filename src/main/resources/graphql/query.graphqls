@@ -1,0 +1,5 @@
+# Queries available on this server
+
+type Query {
+    player(id: ID): Player
+}
