@@ -3,3 +3,14 @@ type PlayerCharacter {
     characterName:String!
     characterClass:CharacterClass!
 }
+
+extend type Query {
+    playerCharacter(id:ID!):PlayerCharacter
+    listPlayerCharacters:[PlayerCharacter]
+}
+
+extend type Mutation {
+    addPlayerCharacter(characterName:String!,characterClass:ID!):Int
+    updatePlayerCharacter(id:ID!,characterName:String,characterClass:ID):Player
+    deletePlayerCharacter(id:ID!):Player
+}

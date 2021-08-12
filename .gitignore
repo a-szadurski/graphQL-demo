@@ -38,3 +38,4 @@ build/
 /.mvn/
 /mvnw.cmd
 /mvnw
+/src/main/resources/examples/

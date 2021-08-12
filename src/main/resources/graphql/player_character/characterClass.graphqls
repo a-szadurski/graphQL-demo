@@ -1,5 +1,0 @@
-type CharacterClass {
-    id:ID!
-    characterClassName:String!
-    characterClassDescription:String!
-}
