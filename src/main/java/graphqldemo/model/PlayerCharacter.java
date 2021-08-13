@@ -5,8 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
-
-//@Builder
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
