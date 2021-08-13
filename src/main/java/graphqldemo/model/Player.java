@@ -16,10 +16,11 @@ import javax.persistence.Id;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
+@ToString
 public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     String playerName;
 }

@@ -18,8 +18,8 @@ public class PlayerCharacter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String characterName;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     CharacterClass characterClass;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     Player player;
 }

@@ -1,16 +1,18 @@
 type Player {
-    id:ID!
+    id:Int!
     playerName:String!
-#    playerCharacters:[PlayerCharacter]
+    #    playerCharacters:[PlayerCharacter]
 }
+scalar Int
 
 type Query {
-    player(id:ID!):Player
-#    listPlayers:[Player]
+    player(id:Int!):Player
+    playerByName(playerName:String!):Player
+    #    listPlayers:[Player]
 }
 
 type Mutation {
     addPlayer(playerName:String!):Int
-#    updatePlayer(id:ID!,playerName:String!):Player
-#    deletePlayer(id:ID!):Player
+    #    updatePlayer(id:ID!,playerName:String!):Player
+    #    deletePlayer(id:ID!):Player
 }

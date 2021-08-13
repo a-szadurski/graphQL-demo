@@ -2,6 +2,7 @@ package graphqldemo.resolver;
 
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import graphqldemo.model.Player;
+import graphqldemo.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -9,9 +10,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class Query implements GraphQLQueryResolver {
 
-    public Player player(String id) {
+    private final PlayerService playerService;
+
+    public Query(PlayerService playerService) {
+        this.playerService = playerService;
+    }
+
+    public Player player(int id) {
         log.info("Retrieving player information");
-        return new Player();
+
+        return playerService.findPlayerById(id);
+    }
+
+    public Player playerByName(String playerName) {
+        return playerService.findPlayerByName(playerName);
     }
 
 //    public List<Player> listPlayers() {
