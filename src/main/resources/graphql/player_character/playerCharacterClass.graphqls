@@ -1,16 +1,16 @@
-#type CharacterClass {
-#    id:ID!
-#    characterClassName:String!
-#    characterClassDescription:String!
-#}
-#
-#extend type Query {
-#    characterClass(id:ID!):CharacterClass
-#    listCharacterClasses:[CharacterClass]
-#}
-#
-#extend type Mutation {
-#    addCharacterClass(characterClassName:String!,characterClassDescription:String):Int
-#    updateCharacterClass(id:ID!,characterClassName:String,characterClassDescription:String):CharacterClass
-#    deleteCharacterClass(id:ID!):CharacterClass
-#}
+type CharacterClass {
+    id:ID!
+    characterClassName:String!
+    characterClassDescription:String!
+}
+
+extend type Query {
+    characterClass(id:ID!):CharacterClass
+    listCharacterClasses:[CharacterClass]
+}
+
+extend type Mutation {
+    addCharacterClass(characterClassName:String!,characterClassDescription:String):Int
+    updateCharacterClass(id:ID!,characterClassName:String,characterClassDescription:String):CharacterClass
+    deleteCharacterClass(id:ID!):CharacterClass
+}
