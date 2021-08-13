@@ -1,17 +1,18 @@
 package graphqldemo.model;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
-@Entity
+
 //@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Entity
 public class PlayerCharacter {
 
     @Id
@@ -20,4 +21,6 @@ public class PlayerCharacter {
     String characterName;
     @ManyToOne
     CharacterClass characterClass;
+    @ManyToOne
+    Player player;
 }
