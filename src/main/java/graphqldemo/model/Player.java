@@ -1,7 +1,7 @@
 package graphqldemo.model;
 
 import lombok.AccessLevel;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
@@ -9,8 +9,9 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Builder
+//@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Player {
 
