@@ -6,11 +6,11 @@ type Player {
 
 type Query {
     player(id:ID!):Player
-    listPlayers:[Player]
+#    listPlayers:[Player]
 }
 
 type Mutation {
     addPlayer(playerName:String!):Int
-    updatePlayer(id:ID!,playerName:String!):Player
-    deletePlayer(id:ID!):Player
+#    updatePlayer(id:ID!,playerName:String!):Player
+#    deletePlayer(id:ID!):Player
 }

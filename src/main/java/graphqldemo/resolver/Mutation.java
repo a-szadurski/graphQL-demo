@@ -1,9 +1,6 @@
 package graphqldemo.resolver;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
-import graphqldemo.model.CharacterClass;
-import graphqldemo.model.Player;
-import graphqldemo.model.PlayerCharacter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -15,35 +12,35 @@ public class Mutation implements GraphQLMutationResolver {
         return 0;
     }
 
-    public Player updatePlayer(Long id, String playerName) {
-        return new Player();
-    }
-
-    public Player deletePlayer(Long id) {
-        return new Player();
-    }
-
-    public int addPlayerCharacter(String characterName, Long characterClassId) {
-        return 0;
-    }
-
-    public PlayerCharacter updatePlayerCharacter(Long id, String characterName, Long characterClassId) {
-        return new PlayerCharacter();
-    }
-
-    public PlayerCharacter deletePlayerCharacter(Long id) {
-        return new PlayerCharacter();
-    }
-
-    public int addCharacterClass(String className, String characterClassDescription) {
-        return 0;
-    }
-
-    public CharacterClass updateCharacterClass(Long id, String characterClassName, String CharacterClassDescription) {
-        return new CharacterClass();
-    }
-
-    public CharacterClass deleteCharacterClass(Long id) {
-        return new CharacterClass();
-    }
+//    public Player updatePlayer(String id, String playerName) {
+//        return new Player();
+//    }
+//
+//    public Player deletePlayer(String id) {
+//        return new Player();
+//    }
+//
+//    public Player addPlayerCharacter(String characterName, String characterClassId) {
+//        return new Player();
+//    }
+//
+//    public PlayerCharacter updatePlayerCharacter(String id, String characterName, String characterClassId) {
+//        return new PlayerCharacter();
+//    }
+//
+//    public PlayerCharacter deletePlayerCharacter(String id) {
+//        return new PlayerCharacter();
+//    }
+//
+//    public int addCharacterClass(String className, String characterClassDescription) {
+//        return 0;
+//    }
+//
+//    public CharacterClass updateCharacterClass(String id, String characterClassName, String CharacterClassDescription) {
+//        return new CharacterClass();
+//    }
+//
+//    public CharacterClass deleteCharacterClass(String id) {
+//        return new CharacterClass();
+//    }
 }
