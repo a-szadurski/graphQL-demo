@@ -3,6 +3,16 @@ type Player {
     playerName:String!
     #    playerCharacters:[PlayerCharacter]
 }
+
+input AddPlayerInput {
+    playerName:String!
+}
+
+input UpdatePlayerInput{
+    id:Int!
+    playerName:String!
+}
+
 scalar Int
 
 type Query {
@@ -12,7 +22,7 @@ type Query {
 }
 
 type Mutation {
-    addPlayer(playerName:String!):Int
-    #    updatePlayer(id:ID!,playerName:String!):Player
+    addPlayer(input:AddPlayerInput!):Int
+    updatePlayer(input:UpdatePlayerInput):Player
     #    deletePlayer(id:ID!):Player
 }

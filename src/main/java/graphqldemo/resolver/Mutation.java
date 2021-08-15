@@ -1,6 +1,10 @@
 package graphqldemo.resolver;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
+import graphqldemo.dto.AddPlayerInput;
+import graphqldemo.dto.UpdatePlayerInput;
+import graphqldemo.model.Player;
+import graphqldemo.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -8,14 +12,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class Mutation implements GraphQLMutationResolver {
 
-    public int addPlayer(String playerName) {
-        return 0;
+    private final PlayerService playerService;
+
+    public Mutation(PlayerService playerService) {
+        this.playerService = playerService;
     }
 
-//    public Player updatePlayer(String id, String playerName) {
-//        return new Player();
-//    }
-//
+    public int addPlayer(AddPlayerInput input) {
+        log.info("Adding player with the name: {}", input.getPlayerName());
+        return playerService.addPlayer(input);
+    }
+
+    public Player updatePlayer(UpdatePlayerInput input) {
+        return playerService.updatePlayer(input);
+    }
+
 //    public Player deletePlayer(String id) {
 //        return new Player();
 //    }
