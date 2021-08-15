@@ -6,6 +6,8 @@ import graphqldemo.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Slf4j
 @Component
 public class Query implements GraphQLQueryResolver {
@@ -17,19 +19,21 @@ public class Query implements GraphQLQueryResolver {
     }
 
     public Player player(int id) {
-        log.info("Retrieving player information");
+        log.info("Retrieving player information by id");
 
         return playerService.findPlayerById(id);
     }
 
     public Player playerByName(String playerName) {
+        log.info("Retrieving player information by name");
         return playerService.findPlayerByName(playerName);
     }
 
-//    public List<Player> listPlayers() {
-//        return new ArrayList<>();
-//    }
-//
+    public List<Player> listPlayers() {
+        log.info("Listing all players");
+        return playerService.listPlayers();
+    }
+
 //    public CharacterClass characterClass(String id) {
 //        return new CharacterClass();
 //    }

@@ -8,7 +8,7 @@ scalar Int
 type Query {
     player(id:Int!):Player
     playerByName(playerName:String!):Player
-    #    listPlayers:[Player]
+    listPlayers:[Player]
 }
 
 type Mutation {

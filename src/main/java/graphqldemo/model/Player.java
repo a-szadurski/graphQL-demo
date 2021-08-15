@@ -23,4 +23,9 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String playerName;
+
+    public Player(String error) {
+        this.id = -1;
+        this.playerName = error;
+    }
 }
