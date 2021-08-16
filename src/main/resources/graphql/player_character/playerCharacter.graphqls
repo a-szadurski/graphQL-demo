@@ -1,14 +1,15 @@
-#type PlayerCharacter {
-#    id:ID!
-#    characterName:String!
-#    characterClass:CharacterClass!
-#}
-#
-#extend type Query {
-#    playerCharacter(id:ID!):PlayerCharacter
-#    listPlayerCharacters:[PlayerCharacter]
-#}
-#
+type PlayerCharacter {
+    id:Int!
+    characterName:String!
+    characterClass:CharacterClass!
+    player:Player!
+}
+
+extend type Query {
+    playerCharacter(id:ID!):PlayerCharacter
+    listPlayerCharacters:[PlayerCharacter]
+}
+
 #extend type Mutation {
 #    addPlayerCharacter(characterName:String!,characterClass:ID!):Player
 #    updatePlayerCharacter(id:ID!,characterName:String,characterClass:ID):Player
