@@ -24,10 +24,12 @@ public class Mutation implements GraphQLMutationResolver {
     }
 
     public Player updatePlayer(UpdatePlayerInput input) {
+        log.info("Updating player with the id: {}", input.getId());
         return playerService.updatePlayer(input);
     }
 
     public Player deletePlayer(Integer id) {
+        log.info("Deleting player with the id: {}", id);
         return playerService.deletePlayer(id);
     }
 

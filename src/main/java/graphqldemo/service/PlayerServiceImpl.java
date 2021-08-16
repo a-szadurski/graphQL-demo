@@ -4,17 +4,12 @@ import graphqldemo.dto.AddPlayerInput;
 import graphqldemo.dto.UpdatePlayerInput;
 import graphqldemo.model.Player;
 import graphqldemo.repository.PlayerRepository;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-@Slf4j
 public class PlayerServiceImpl implements PlayerService {
-
-    private final String PLAYER_NOT_FOUND = "Error - player not found";
 
     private final PlayerRepository playerRepository;
 
@@ -25,9 +20,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Player findPlayerById(Integer id) {
-
-        Optional<Player> playerOptional = playerRepository.findById(id);
-        return playerOptional.orElse(new Player(PLAYER_NOT_FOUND));
+        return playerRepository.findById((int) id);
     }
 
     @Override
