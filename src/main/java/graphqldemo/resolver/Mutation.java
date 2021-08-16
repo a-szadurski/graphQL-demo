@@ -1,10 +1,10 @@
 package graphqldemo.resolver;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
-import graphqldemo.dto.AddCharacterClassInput;
-import graphqldemo.dto.AddPlayerInput;
-import graphqldemo.dto.UpdateCharacterClassInput;
-import graphqldemo.dto.UpdatePlayerInput;
+import graphqldemo.dto.character_class.AddCharacterClassInput;
+import graphqldemo.dto.character_class.UpdateCharacterClassInput;
+import graphqldemo.dto.player.AddPlayerInput;
+import graphqldemo.dto.player.UpdatePlayerInput;
 import graphqldemo.model.CharacterClass;
 import graphqldemo.model.Player;
 import graphqldemo.service.CharacterClassService;

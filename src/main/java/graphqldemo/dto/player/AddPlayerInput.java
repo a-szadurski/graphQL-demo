@@ -1,4 +1,4 @@
-package graphqldemo.dto;
+package graphqldemo.dto.player;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package graphqldemo.dto;
+package graphqldemo.dto.player_characer;
 
 public class AddPlayerCharacterInput {
 }

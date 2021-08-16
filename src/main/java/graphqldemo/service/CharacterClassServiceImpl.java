@@ -1,7 +1,7 @@
 package graphqldemo.service;
 
-import graphqldemo.dto.AddCharacterClassInput;
-import graphqldemo.dto.UpdateCharacterClassInput;
+import graphqldemo.dto.character_class.AddCharacterClassInput;
+import graphqldemo.dto.character_class.UpdateCharacterClassInput;
 import graphqldemo.model.CharacterClass;
 import graphqldemo.repository.CharacterClassRepository;
 import org.springframework.stereotype.Service;

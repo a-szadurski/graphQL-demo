@@ -1,10 +1,11 @@
-package graphqldemo.dto;
+package graphqldemo.dto.character_class;
 
 import lombok.Data;
 
 @Data
-public class AddCharacterClassInput {
+public class UpdateCharacterClassInput {
 
+    Long id;
     String characterClassName;
     String characterClassDescription;
 }
