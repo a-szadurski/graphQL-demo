@@ -12,7 +12,7 @@ public interface CharacterClassService {
 
     List<CharacterClass> listCharacterClasses();
 
-    int addPlayer(AddCharacterClassInput input);
+    int addCharacterClass(AddCharacterClassInput input);
 
     CharacterClass updateCharacterClass(UpdateCharacterClassInput input);
 

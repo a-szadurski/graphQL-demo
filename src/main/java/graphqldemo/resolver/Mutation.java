@@ -1,9 +1,13 @@
 package graphqldemo.resolver;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
+import graphqldemo.dto.AddCharacterClassInput;
 import graphqldemo.dto.AddPlayerInput;
+import graphqldemo.dto.UpdateCharacterClassInput;
 import graphqldemo.dto.UpdatePlayerInput;
+import graphqldemo.model.CharacterClass;
 import graphqldemo.model.Player;
+import graphqldemo.service.CharacterClassService;
 import graphqldemo.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -13,9 +17,11 @@ import org.springframework.stereotype.Component;
 public class Mutation implements GraphQLMutationResolver {
 
     private final PlayerService playerService;
+    private final CharacterClassService characterClassService;
 
-    public Mutation(PlayerService playerService) {
+    public Mutation(PlayerService playerService, CharacterClassService characterClassService) {
         this.playerService = playerService;
+        this.characterClassService = characterClassService;
     }
 
     public int addPlayer(AddPlayerInput input) {
@@ -44,16 +50,19 @@ public class Mutation implements GraphQLMutationResolver {
 //    public PlayerCharacter deletePlayerCharacter(String id) {
 //        return new PlayerCharacter();
 //    }
-//
-//    public int addCharacterClass(String className, String characterClassDescription) {
-//        return 0;
-//    }
-//
-//    public CharacterClass updateCharacterClass(String id, String characterClassName, String CharacterClassDescription) {
-//        return new CharacterClass();
-//    }
-//
-//    public CharacterClass deleteCharacterClass(String id) {
-//        return new CharacterClass();
-//    }
+
+    public int addCharacterClass(AddCharacterClassInput input) {
+        log.info("Adding player with the name: {}, description: {}", input.getCharacterClassName(), input.getCharacterClassDescription());
+        return characterClassService.addCharacterClass(input);
+    }
+
+    public CharacterClass updateCharacterClass(UpdateCharacterClassInput input) {
+        log.info("Updating character class with the id: {}", input.getId());
+        return characterClassService.updateCharacterClass(input);
+    }
+
+    public CharacterClass deleteCharacterClass(Integer id) {
+        log.info("Deleting character class with the id: {}", id);
+        return characterClassService.deleteCharacterClass(id);
+    }
 }

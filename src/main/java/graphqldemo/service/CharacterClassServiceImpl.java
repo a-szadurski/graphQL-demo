@@ -29,7 +29,7 @@ public class CharacterClassServiceImpl implements CharacterClassService{
     }
 
     @Override
-    public int addPlayer(AddCharacterClassInput input) {
+    public int addCharacterClass(AddCharacterClassInput input) {
         return 0;
     }
 
