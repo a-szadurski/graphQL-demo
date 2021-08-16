@@ -16,7 +16,7 @@ public class PlayerCharacter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     String characterName;
     @ManyToOne(fetch = FetchType.EAGER)
     CharacterClass characterClass;

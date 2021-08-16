@@ -4,10 +4,10 @@ type CharacterClass {
     characterClassDescription:String!
 }
 
-#extend type Query {
-#    characterClass(id:ID!):CharacterClass
-#    listCharacterClasses:[CharacterClass]
-#}
+extend type Query {
+    characterClass(id:ID!):CharacterClass
+    listCharacterClasses:[CharacterClass]
+}
 #
 #extend type Mutation {
 #    addCharacterClass(characterClassName:String!,characterClassDescription:String):Int

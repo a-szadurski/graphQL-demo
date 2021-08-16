@@ -10,8 +10,6 @@ public interface CharacterClassService {
 
     CharacterClass findCharacterClassById(Integer id);
 
-    CharacterClass findCharacterClassByName(String name);
-
     List<CharacterClass> listCharacterClasses();
 
     int addPlayer(AddCharacterClassInput input);

@@ -20,7 +20,7 @@ public class CharacterClass {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     String characterClassName;
     String characterClassDescription;
 }

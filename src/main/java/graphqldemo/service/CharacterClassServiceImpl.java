@@ -3,6 +3,7 @@ package graphqldemo.service;
 import graphqldemo.dto.AddCharacterClassInput;
 import graphqldemo.dto.UpdateCharacterClassInput;
 import graphqldemo.model.CharacterClass;
+import graphqldemo.repository.CharacterClassRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,19 +11,21 @@ import java.util.List;
 @Service
 public class CharacterClassServiceImpl implements CharacterClassService{
 
-    @Override
-    public CharacterClass findCharacterClassById(Integer id) {
-        return null;
+    private final CharacterClassRepository characterClassRepository;
+
+    public CharacterClassServiceImpl(CharacterClassRepository characterClassRepository) {
+        this.characterClassRepository = characterClassRepository;
     }
 
+
     @Override
-    public CharacterClass findCharacterClassByName(String name) {
-        return null;
+    public CharacterClass findCharacterClassById(Integer id) {
+        return characterClassRepository.findById((int)id);
     }
 
     @Override
     public List<CharacterClass> listCharacterClasses() {
-        return null;
+        return characterClassRepository.findAll();
     }
 
     @Override
