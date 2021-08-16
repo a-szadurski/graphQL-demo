@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PlayerCharacterServiceImpl implements PlayerCharacterService{
+public class PlayerCharacterServiceImpl implements PlayerCharacterService {
 
     private final PlayerCharacterRepository playerCharacterRepository;
 
@@ -19,7 +19,7 @@ public class PlayerCharacterServiceImpl implements PlayerCharacterService{
 
     @Override
     public PlayerCharacter findPlayerCharacterById(Integer id) {
-        return playerCharacterRepository.findById((int)id);
+        return playerCharacterRepository.findById((int) id);
     }
 
     @Override

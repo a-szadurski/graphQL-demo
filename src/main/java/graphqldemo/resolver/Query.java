@@ -52,7 +52,8 @@ public class Query implements GraphQLQueryResolver {
     }
 
     public PlayerCharacter playerCharacter(Integer id) {
-        return new PlayerCharacter();
+        log.info("Retrieving player character information by id: {}", id);
+        return playerCharacterService.findPlayerCharacterById(id);
     }
 
     public List<PlayerCharacter> listPlayerCharacters() {

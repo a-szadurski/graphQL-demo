@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CharacterClassServiceImpl implements CharacterClassService{
+public class CharacterClassServiceImpl implements CharacterClassService {
 
     private final CharacterClassRepository characterClassRepository;
 
@@ -20,7 +20,7 @@ public class CharacterClassServiceImpl implements CharacterClassService{
 
     @Override
     public CharacterClass findCharacterClassById(Integer id) {
-        return characterClassRepository.findById((int)id);
+        return characterClassRepository.findById((int) id);
     }
 
     @Override
