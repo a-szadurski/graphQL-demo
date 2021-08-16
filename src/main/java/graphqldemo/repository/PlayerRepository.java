@@ -11,4 +11,6 @@ public interface PlayerRepository extends JpaRepository<Player, Integer> {
 
     @Transactional
     Player findById(int id);
+
+    Player deleteById(int id);
 }

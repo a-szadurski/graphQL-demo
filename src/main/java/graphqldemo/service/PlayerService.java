@@ -17,4 +17,7 @@ public interface PlayerService {
     int addPlayer(AddPlayerInput input);
 
     Player updatePlayer(UpdatePlayerInput input);
+
+    Player deletePlayer(int id);
+
 }

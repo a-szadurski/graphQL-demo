@@ -27,10 +27,10 @@ public class Mutation implements GraphQLMutationResolver {
         return playerService.updatePlayer(input);
     }
 
-//    public Player deletePlayer(String id) {
-//        return new Player();
-//    }
-//
+    public Player deletePlayer(Integer id) {
+        return playerService.deletePlayer(id);
+    }
+
 //    public Player addPlayerCharacter(String characterName, String characterClassId) {
 //        return new Player();
 //    }

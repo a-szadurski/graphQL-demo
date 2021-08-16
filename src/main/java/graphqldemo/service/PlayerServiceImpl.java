@@ -49,11 +49,12 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public Player updatePlayer(UpdatePlayerInput input) {
         Player player = playerRepository.findById(input.getId());
-        if (player.getPlayerName().equals(PLAYER_NOT_FOUND)) {
-            log.info("Player selected for update does not exist (entered id: {}", input.getId());
-            return player;
-        }
         player.setPlayerName(input.getPlayerName());
         return playerRepository.save(player);
+    }
+
+    @Override
+    public Player deletePlayer(int id) {
+        return playerRepository.deleteById(id);
     }
 }
