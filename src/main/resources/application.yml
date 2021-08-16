@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: graphQLdemo
+  datasource:
+    url: jdbc:mysql://localhost:3306/graphql_demo?serverTimezone=UTC
+    username: root
+    password: coderslab
+  jpa:
+    hibernate.ddl-auto: update
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  http2:
+    enabled: true
+graphql:
+  servlet:
+    max-query-depth: 180
+    exception-handlers-enabled: true
